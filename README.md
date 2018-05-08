@@ -1,21 +1,24 @@
 # A Basic Finder Visor
 
-## What ?
-An apple script for use the Finder as "TotalFinder's Visor feature".
+Make a Finder window appear with better touch tool trackpad gesture --> apple script
+The finder window :
+   - Create if no exist with "visor size" (half of the screen height, full screen width and bottom fixed)
+   - Else if exist, take existing window
+   - If window is not frontmost, make it active
+   - If window is minimized (or hidden) restore (or make it active)
 
-## Why ?
-The TotalFinder visor working great and is very powerfull, but it force the user to use "chrome syle tabs" and I don't like it  😇.
+## Requirments
+Better Touch Tool or any software for binding apple script to keyboard shortcut / trackpad gesture
 
-## How use it
-For using it, you should use a software like Better Touch Tool for execute the apple script on (for eg) trackpad gesture.
-My config is "Two fingers swipe from bottom edge" for execute the AS and Finder specific "Two fingers swipe from top edge" for close it.
-You will probably have to give accessibility rights to Better touch tool for execute AS.
+## Configure
 
-## How it work
-On script execute :
+### Better Touch Tool open the visor
+Simply add a new rule with "Execute apple script" and paste the script content in the popup
+I personnaly use "Swipe from top edge"
+![Open Visor BTT](https://raw.githubusercontent.com/pointu-l/finder-basic-visor/master/open.png)
 
-1/ Look for a Finder window.
 
-2/ If find and is active, hide the window
-   If find and not active, set the existing window on foreground (and keep his existing size)
-   Else if not Finder win at all, create a new Finder win and size/move to the bottom row of the screen (1/3) and full width.
+### Better Touch Tool close the visor
+Juste create a rule (you can put it in the "Finder" left sidebar item for prevent conflict) than minimise the windows.
+You can use the minimise better touch tool action or CMD+M keyboard shortcut
+![Open Visor BTT](https://raw.githubusercontent.com/pointu-l/finder-basic-visor/master/close.png)
